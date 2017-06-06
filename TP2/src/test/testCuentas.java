@@ -36,12 +36,14 @@ public class testCuentas {
 	@Test
 	public void testCuentaCorriente()
 	{
-		CuentaCorriente cliente = new CuentaCorriente(1000.00,300.00);
 		
-		cliente.getGirarDescubierto(1200.00);
-		assertEquals(10.0, cliente.getGirarDescubierto(1200.0),0.1);
-		
-		
+		CuentaCorriente cliente = new CuentaCorriente(1000.00, 300.00);
+	
+	cliente.setPosibleExtraerExtra(1200.00);
+	
+	assertEquals(10.00, cliente.deudaBanco(), 0.1);
+	
+	
 	}
 
 }
